@@ -1,4 +1,4 @@
-package company.a.b.c.bankingkata;
+package company.a.b.c.kata.haystack;
 
 //Can you find the needle in the haystack?
 //

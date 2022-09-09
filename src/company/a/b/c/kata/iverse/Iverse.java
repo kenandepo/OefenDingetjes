@@ -1,4 +1,4 @@
-package company.a.b.c.bankingkata;
+package company.a.b.c.kata.iverse;
 
 public class Iverse {
 
@@ -10,8 +10,6 @@ public class Iverse {
 
                 String arrayValue = "-" + array[i];
 
-            final String s = String.valueOf(array[i]);
-            
             averse[i] = Integer.parseInt(arrayValue);
             }
         return averse;

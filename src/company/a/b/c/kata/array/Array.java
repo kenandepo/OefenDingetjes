@@ -1,4 +1,4 @@
-package company.a.b.c.bankingkata;
+package company.a.b.c.kata.array;
 
 //You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
 //

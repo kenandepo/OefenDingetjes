@@ -1,4 +1,4 @@
-package company.a.b.c.bankingkata;
+package company.a.b.c.kata.abbreviatetwowords;
 
 public class AbbreviateTwoWords {
 
@@ -9,8 +9,7 @@ public class AbbreviateTwoWords {
         s[0] = s[0].substring(0, 1);
         s[1] = s[1].substring(0, 1);
 
-        String initials = s[0] + "." + s[1];
+        return s[0] + "." + s[1];
 
-        return initials;
     }
 }

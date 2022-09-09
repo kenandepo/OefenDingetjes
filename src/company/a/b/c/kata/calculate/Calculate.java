@@ -1,4 +1,4 @@
-package company.a.b.c.bankingkata;
+package company.a.b.c.kata.calculate;
 
 //Write function bmi that calculates body mass index (bmi = weight / height2).
 //

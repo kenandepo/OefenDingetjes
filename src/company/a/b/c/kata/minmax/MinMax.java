@@ -1,4 +1,4 @@
-package company.a.b.c.bankingkata;
+package company.a.b.c.kata.minmax;
 
 import java.util.Arrays;
 

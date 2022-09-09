@@ -1,4 +1,4 @@
-package company.a.b.c.bankingkata;
+package company.a.b.c.kata.oddoreven;
 //Task:
 //        Given a list of integers, determine whether the sum of its elements is odd or even.
 //
