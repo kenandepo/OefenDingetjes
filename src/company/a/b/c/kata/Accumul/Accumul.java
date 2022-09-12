@@ -8,18 +8,18 @@ package company.a.b.c.kata.Accumul;
 //accum("cwAt") -> "C-Ww-Aaa-Tttt"
 //The parameter of accum is a string which includes only letters from a..z and A..Z.
 public class Accumul {
-
-    public static String accum(String s) {
-        final String input = s;
-        final int length = s.length();
-
-        for (int i = 0; i < length; i++) {
-            String temp = "";
-            String result = "";
-            for (int j = 0; j < i; j++) {
-                input.charAt(i);
-            result=//todo
-            }
-        }
-    }
+//
+//    public static String accum(String s) {
+//        final String input = s;
+//        final int length = s.length();
+//
+//        for (int i = 0; i < length; i++) {
+//            String temp = "";
+//            String result = "";
+//            for (int j = 0; j < i; j++) {
+//                input.charAt(i);
+//            result=//todo
+//            }
+//        }
+//    }
 }
