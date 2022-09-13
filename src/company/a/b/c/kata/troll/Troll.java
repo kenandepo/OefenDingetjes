@@ -9,6 +9,8 @@
 //Note: for this kata y isn't considered a vowel.
 package company.a.b.c.kata.troll;
 
+import java.util.regex.Pattern;
+
 public class Troll {
 
     public static String disemvowel(String str) {
@@ -31,6 +33,12 @@ public class Troll {
 
     //todo wat ook werkt
 //            return str.replaceAll("aAeEiIuUoO","");
+    //of
+//    private static final Pattern DISEMVOWEL_PATTERN = Pattern.compile("[AaEeIiOoUu]");
+//    public static String disemvowel(String str) {
+//        return DISEMVOWEL_PATTERN.matcher(str).replaceAll("");
+//    }
+
 
 }
 
