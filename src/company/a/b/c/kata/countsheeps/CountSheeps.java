@@ -1,8 +1,17 @@
 package company.a.b.c.kata.countsheeps;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
 //Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
 public class CountSheeps {
+//    return Collections.frequency(Arrays.asList(arrayOfSheeps), true);
+
 
         public int countSheeps(Boolean[] arrayOfSheeps) {
+
+
             int totalNum = 0;
 
             for (int i = 0; i < arrayOfSheeps.length; i++) {
@@ -13,6 +22,7 @@ public class CountSheeps {
             }
             return totalNum;
         }
+
 }
 //import org.junit.Test;
 //import static org.junit.Assert.assertEquals;
