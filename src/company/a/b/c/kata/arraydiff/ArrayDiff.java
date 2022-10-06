@@ -1,33 +1,44 @@
 package company.a.b.c.kata.arraydiff;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.IntStream;
-
-import org.yaml.snakeyaml.util.ArrayUtils;
 
 public class ArrayDiff {
-    //TODO deze werkend krijgen
+//TODO candidate to refactor
+    public static int[] arrayDiff(int[] input, int[] filter) {
 
-    public static void arrayDiff(int[] a, int[] b) {
+        final List<Integer> inputList = new ArrayList<>();
 
-        final List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < a.length; i++) {
-            list.add(a[i]);
+        for (int i = 0; i < input.length; i++) {
+            inputList.add(input[i]);
         }
 
-        final List listb = new ArrayList();
-        for (int i = 0; i < b.length; i++) {
-            listb.add(b[i]);
+        final List<Integer> filterOutList = new ArrayList();
+
+        for (int i = 0; i < filter.length; i++) {
+            filterOutList.add(filter[i]);
         }
 
-        for (int i = 0; i < list.size(); i++) {
-            if (list.contains(listb.get(i))) {
-                list.remove(listb.get(i));
+        final List<Integer> resultList = new ArrayList<>();
+
+        for (int i = 0; i < inputList.size(); i++) {
+            if (!filterOutList.contains(inputList.get(i))) {
+                resultList.add(inputList.get(i));
+
+                //2 oplossingen: 1, de index bijwerken i--
+                //2: nieuwe list aanmaken en vullen met resultaten
+                //met waarden die niet matchen
+
+                //convienent method Array: Arrays.toList() en andersom
             }
         }
-//    return list;
+
+        int[] resultArray = new int[resultList.size()];
+
+        for (int i = 0; i < resultList.size(); i++) {
+            resultArray[i] = resultList.get(i);
+        }
+        return resultArray;
     }
 
 }
