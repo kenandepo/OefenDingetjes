@@ -1,6 +1,6 @@
-package company.a.b.c.kata.grafebook;
+package company.a.b.c.kata.gradebook;
 
-public class GrassHopper {
+public class GradeBook {
 
     public static char getGrade(int s1, int s2, int s3) {
         int average = (s1 + s2 + s3) / 3;
