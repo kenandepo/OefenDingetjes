@@ -1,19 +1,26 @@
 package company.a.b.c.kata.pangram;
 
+import java.util.HashMap;
 
 public class Pangram {
 
     public boolean check(String sentence) {
-//TODO this needs some more time to workout :)
-        int numberOfCharactersinAlphabet = 0;
 
-        for (int i = 0; i < sentence.length(); i++) {
-            if (String.valueOf(sentence.charAt(i)).equals("{a-z}")) {
-                numberOfCharactersinAlphabet++;
+        final String input = sentence.toLowerCase()
+                .replace(" ", "")
+                .replace(".", "");
+        HashMap<Character, Character> alphabetMap = new HashMap<>();
+
+        for (char ch = 'a'; ch <= 'z'; ++ch) {
+            alphabetMap.put(ch, ch);
+        }
+
+        for (int i = 0; i < input.length(); i++) {
+            char key = input.charAt(i);
+            if (alphabetMap.containsKey(key)) {
+                alphabetMap.remove(key);
             }
         }
-        return numberOfCharactersinAlphabet == 26?true:false;
-
+        return alphabetMap.size() == 0 ? true : false;
     }
-
 }
