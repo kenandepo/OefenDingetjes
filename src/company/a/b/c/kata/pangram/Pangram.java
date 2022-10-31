@@ -22,5 +22,10 @@ public class Pangram {
             }
         }
         return alphabetMap.size() == 0 ? true : false;
+        //appaerently another way to solve it
+        //return input.chars().map(Character::toLowerCase).filter(Character::isAlphabetic).distinct().count() == 26;
     }
 }
+
+
+
