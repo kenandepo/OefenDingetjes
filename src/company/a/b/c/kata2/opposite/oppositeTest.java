@@ -8,6 +8,6 @@ class oppositeTest {
 
     @Test
     public void tests() {
-        assertEquals(-1, opposite.opposite(1));
+        assertEquals(-1, Opposite.opposite(1));
     }
 }

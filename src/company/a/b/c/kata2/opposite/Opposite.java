@@ -1,6 +1,6 @@
 package company.a.b.c.kata2.opposite;
 
-public class opposite {
+public class Opposite {
 
     public static int opposite(int number) {
 
