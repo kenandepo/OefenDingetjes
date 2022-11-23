@@ -4,7 +4,7 @@ public class RoundToTheNextMultipleOf5 {
 
     public static int roundToNext5(int number) {
 
-        return Math.round((number / 5 + 1) * 10);
+        return number == 0 ? 0 : Math.round((number / 5 + 1) * 10);
 
     }
 }
