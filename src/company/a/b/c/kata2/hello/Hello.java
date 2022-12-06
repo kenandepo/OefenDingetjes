@@ -11,6 +11,3 @@ public class Hello {
         return "Hello, " + substring + "! Welcome to " + city + ", " + state + "!";
     }
 }
-
-//other solution
-//    return String.format("Hello, %s! Welcome to %s, %s!",String.join(" ", name),city,state);
