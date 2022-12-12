@@ -12,26 +12,26 @@ public class High {
 //    If two words score the same, return the word that appears earliest in the original string.
 //
 //    All letters will be lowercase and all inputs will be valid.
-    public static String high(String s) {
-
-        final HashMap<Character, Integer> characterIntegerHashMap = new HashMap<>();
-
-        int pointsOfLetter = 0;
-
-        for (char ch = 'a'; ch <= 'z'; ++ch) {
-            characterIntegerHashMap.put(ch, pointsOfLetter);
-            pointsOfLetter++;
-        }
-
-        final String[] splittedInputWords = s.split(" ");
-
-        final HashMap<String, Integer> mappedValueList = new HashMap<>();
-        int scoreOfWord = 0;
-
-        for (int i = 0; i < splittedInputWords.length; i++) {
-            scoreOfWord = scoreOfWord + characterIntegerHashMap.get(splittedInputWords[pointsOfLetter].charAt(i));
-        }
-
-    }
+//    public static String high(String s) {
+//
+//        final HashMap<Character, Integer> characterIntegerHashMap = new HashMap<>();
+//
+//        int pointsOfLetter = 0;
+//
+//        for (char ch = 'a'; ch <= 'z'; ++ch) {
+//            characterIntegerHashMap.put(ch, pointsOfLetter);
+//            pointsOfLetter++;
+//        }
+//
+//        final String[] splittedInputWords = s.split(" ");
+//
+//        final HashMap<String, Integer> mappedValueList = new HashMap<>();
+//        int scoreOfWord = 0;
+//
+//        for (int i = 0; i < splittedInputWords.length; i++) {
+//            scoreOfWord = scoreOfWord + characterIntegerHashMap.get(splittedInputWords[pointsOfLetter].charAt(i));
+//        }
+//
+//    }
 
 }
