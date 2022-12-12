@@ -1,7 +1,5 @@
 package company.a.b.c.kata.factorial;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
