@@ -3,19 +3,19 @@ package company.a.b.c.kata2.pipefix;
 import java.util.Arrays;
 
 public class PipeFix {
-//todo fix me
-    public static int[] pipeFix(int[] numbers) {
 
+    public static int[] pipeFix(int[] numbers) {
         Arrays.sort(numbers);
 
-        int startNumber = numbers[0];
-        int endNumber = numbers[numbers.length - 1];
+        int lowest = numbers[0];
+        int highest = numbers[numbers.length - 1];
 
-        int[] resultArray = new int[endNumber - 1];
+        int[] resultArray = new int[highest - lowest + 1];
 
-        for (int i = startNumber, j = 0; i < endNumber-1; i++, j++) {
-            resultArray[j] = numbers[i - 1];
+        for (int index = 0; index + lowest <= highest; index++) {
+            resultArray[index] = index + lowest;
         }
+
         return resultArray;
     }
 }
