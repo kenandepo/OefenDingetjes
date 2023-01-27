@@ -1,13 +1,15 @@
 package company.a.b.c.kata3.KataExampleTwist;
 
+import java.util.Arrays;
+
 public class KataExampleTwist {
 
     public static String[] kataExampleTwist() {
+
         String[] websites = new String[1000];
 
-        for (int i = 0; i < 1000; i++) {
-            websites[i] = "codewars";
-        }
+        Arrays.fill(websites, "codewars");
+
         return websites;
     }
 }
