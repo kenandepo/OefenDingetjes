@@ -1,21 +1,13 @@
 package company.a.b.c.kata3;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
+
+import com.google.common.primitives.Ints;
 
 public class FixingPipe {
     public static int[] pipeFix(int[] numbers) {
 
-        //        Arrays.sort(numbers);
-
-        int beginDigit = numbers[0];
-        int endDigit = numbers[numbers.length - 1];
-
-        int[] resultArray = new int[endDigit - beginDigit + 1];
-
-        for (int j = beginDigit, i = 0; i + beginDigit <= endDigit; i++, j++) {
-            resultArray[i] = j;
-        }
-
-        return resultArray;
+        return IntStream.rangeClosed(numbers[0], numbers[numbers.length - 1]).toArray();
     }
 }
