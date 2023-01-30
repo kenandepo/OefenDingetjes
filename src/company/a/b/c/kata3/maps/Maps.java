@@ -1,15 +1,12 @@
 package company.a.b.c.kata3.maps;
 
+import java.util.Arrays;
+
 public class Maps {
 
     public static int[] map(int[] arr) {
 
-        int[] resultArray = new int[arr.length];
+        return Arrays.stream(arr).map(x -> x*2).toArray();
 
-        for (int i = 0; i < resultArray.length; i++) {
-
-            resultArray[i] = arr[i] * 2;
-        }
-        return resultArray;
     }
 }
