@@ -1,5 +1,7 @@
 package company.a.b.c.streams.adultsvskids;
 
+import static java.util.Arrays.asList;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,14 +10,16 @@ import java.util.stream.Collectors;
 
 public class AdultsKids {
 
-    //refactor to use Stream
-    public static Map<Boolean, List<Person>> partitionAdults(List<Person> people) {
-        Map<Boolean, List<Person>> map = new HashMap<>();
-        map.put(true, new ArrayList<>());
-        map.put(false, new ArrayList<>());
-        for (Person person : people) {
-            map.get(person.getAge() >= 18).add(person);
-        }
-        return map;
-    }
+    //todo refactor to use Stream
+//    public static Map<Boolean, List<Person>> partitionAdults(List<Person> people) {
+//        Map<Boolean, List<Person>> hashMap = new HashMap<>();
+//        hashMap.put(true, new ArrayList<>());
+//        hashMap.put(false, new ArrayList<>());
+//
+//        return people.stream().filter(p -> p.getAge() >= 18).map(p -> hashMap.put(true, new HashMap<Boolean,>(p))).collect(Collectors.toList()); for (Person person : people) {
+//            hashMap.get(person.getAge() >= 18).add(person);
+//        }
+//
+//        return hashMap;
+//    }
 }
