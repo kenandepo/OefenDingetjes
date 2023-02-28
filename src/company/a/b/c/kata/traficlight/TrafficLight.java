@@ -15,6 +15,5 @@ public class TrafficLight {
         }
         return "green";
 
-
     }
 }
