@@ -1,20 +1,15 @@
 package company.a.b.c.streams.ArrayPrinter;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class ArrayPrinter {
 
     public static String printArray(Integer array[]) {
 
-        String result = "";
+        return Arrays.stream(array)
+                .map(Object::toString)
+                .collect(Collectors.joining(","));
 
-        for (int i = 0; i < array.length; i++) {
-
-            if (i == 0) {
-                result = result + array[i];
-            }
-            if (i != 0) {
-                result = result + "," + array[i];
-            }
-        }
-        return result;
     }
 }
