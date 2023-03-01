@@ -2,9 +2,10 @@ package company.a.b.c.kata3.profit;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
+import java.util.Random;
+
 import org.junit.jupiter.api.Test;
 
-import java.util.Random;
 
 import org.junit.Before;
 
