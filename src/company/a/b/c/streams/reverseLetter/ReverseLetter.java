@@ -8,6 +8,5 @@ public class ReverseLetter {
         StringBuilder stringBuilder = new StringBuilder(s);
         return stringBuilder.reverse()
                 .toString();
-
     }
 }
