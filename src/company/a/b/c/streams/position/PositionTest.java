@@ -9,7 +9,7 @@ class PositionTest {
     @Test
     public void basicTests() {
         assertEquals("Position of alphabet: 1", Position.position('a'));
-//        assertEquals("Position of alphabet: 26", Position.position('z'));
-//        assertEquals("Position of alphabet: 5", Position.position('e'));
+        assertEquals("Position of alphabet: 26", Position.position('z'));
+        assertEquals("Position of alphabet: 5", Position.position('e'));
     }
 }
