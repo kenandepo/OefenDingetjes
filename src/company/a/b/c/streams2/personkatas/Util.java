@@ -1,8 +1,11 @@
 package company.a.b.c.streams2.personkatas;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 public class Util {
 
@@ -19,23 +22,31 @@ public class Util {
     }
 
     public static List<String> sortStrings(List<String> input) {
-        return null;
+        return input.stream()
+                .sorted()
+                .toList();
     }
 
     public static List<Integer> sortIntegers(List<String> input) {
-        return null;
+        return input.stream()
+                .map(Integer::valueOf)
+                .sorted()
+                .toList();
     }
 
     public static List<Integer> sortIntegersDescending(List<String> input) {
-        return null;
+        return input.stream()
+                .map(Integer::valueOf)
+                .sorted(Comparator.reverseOrder())
+                .toList();
     }
 
     public static Integer sum(List<Integer> numbers) {
-        return null;
+        return numbers.stream()
+                .reduce(0, (a, b) -> a + b);
     }
 
     public static List<String> flattenToSingleCollection(List<List<String>> input) {
-        return null;
     }
 
     public static String separateNamesByComma(List<Person> input) {

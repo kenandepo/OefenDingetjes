@@ -1,9 +1,6 @@
 package company.a.b.c.streams2.personkatas;
 
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 import static java.util.Arrays.asList;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
@@ -27,44 +24,42 @@ class UtilTest {
         assertEquals(List.of("is", "8"), result);
     }
 
-        @Test
-        public void shouldSortStrings() throws Exception {
-//            List<String> input = Arrays.asList("C", "F", "A", "D", "B", "E");
-//            List<String> result = Util.sortStrings(input);
-//            assertThat(result, is(equalTo(Arrays.asList("A", "B", "C", "D", "E", "F"))));
-        }
+    @Test
+    public void shouldSortStrings() throws Exception {
+        List<String> input = Arrays.asList("C", "F", "A", "D", "B", "E");
+        List<String> result = Util.sortStrings(input);
+        assertEquals((Arrays.asList("A", "B", "C", "D", "E", "F")), result);
+    }
 
-    //    @Test
-    //    public void shouldSortIntegers() throws Exception {
-    //        List<String> input = Arrays.asList("2", "4", "12", "3");
-    //        List<Integer> result = Util.sortIntegers(input);
-    //        assertThat(result, is(equalTo(Arrays.asList(2, 3, 4, 12))));
-    //    }
-    //
-    //    @Test
-    //    public void shouldSortIntegersInDescendingOrder() throws Exception {
-    //        List<String> input = Arrays.asList("2", "4", "12", "3");
-    //        List<Integer> result = Util.sortIntegersDescending(input);
-    //        assertThat(result, is(equalTo(Arrays.asList(12, 4, 3, 2))));
-    //    }
-    //
-    //    @Test
-    //    public void shouldSumIntegersInCollection() {
-    //        List<Integer> input = asList(1, 2, 3, 4, 5);
-    //        Integer result = Util.sum(input);
-    //        assertThat(result, equalTo(1 + 2 + 3 + 4 + 5));
-    //    }
-    //
-    //    @Test
-    //    public void shouldFlattenCollectionToSingleCollection() {
-    //        List<List<String>> input = asList(
-    //                asList("Duke", "Fred"),
-    //                asList("John", "George", "Paal"));
-    //
-    //        List<String> result = Util.flattenToSingleCollection(input);
-    //        assertThat(result, contains("Duke", "Fred", "John", "George", "Paal"));
-    //    }
-    //
+    @Test
+    public void shouldSortIntegers() throws Exception {
+        List<String> input = Arrays.asList("2", "4", "12", "3");
+        List<Integer> result = Util.sortIntegers(input);
+        assertEquals(Arrays.asList(2, 3, 4, 12), result);
+    }
+
+    @Test
+    public void shouldSortIntegersInDescendingOrder() throws Exception {
+        List<String> input = Arrays.asList("2", "4", "12", "3");
+        List<Integer> result = Util.sortIntegersDescending(input);
+        assertEquals((Arrays.asList(12, 4, 3, 2)), result);
+    }
+
+    @Test
+    public void shouldSumIntegersInCollection() {
+        List<Integer> input = asList(1, 2, 3, 4, 5);
+        Integer result = Util.sum(input);
+        assertEquals(1 + 2 + 3 + 4 + 5, result);
+    }
+
+    @Test
+    public void shouldFlattenCollectionToSingleCollection() {
+        List<List<String>> input = asList(asList("Duke", "Fred"), asList("John", "George", "Paal"));
+
+        List<String> result = Util.flattenToSingleCollection(input);
+        assertEquals(List.of("Duke", "Fred", "John", "George", "Paal"), result);
+    }
+
     //    @Test
     //    public void shouldSeparateNamesByComma() {
     //        List<Person> input = asList(
