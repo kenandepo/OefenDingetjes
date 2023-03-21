@@ -47,6 +47,9 @@ public class Util {
     }
 
     public static List<String> flattenToSingleCollection(List<List<String>> input) {
+        return input.stream()
+                .flatMap(List::stream)
+                .toList();
     }
 
     public static String separateNamesByComma(List<Person> input) {
