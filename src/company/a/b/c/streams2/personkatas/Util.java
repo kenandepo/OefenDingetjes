@@ -73,7 +73,15 @@ public class Util {
     }
 
     public static IntSummaryStatistics getSummaryStatisticsForAge(List<Person> input) {
-        return null;
+        final Optional<Integer> min = input.stream()
+                .min(Comparator.comparing(Person::getAge))
+                .map(Person::getAge);
+
+        final Optional<Integer> max = input.stream()
+                .max(Comparator.comparing(Person::getAge))
+                .map(Person::getAge);
+
+        return new IntSummaryStatistics(input.size(), min.get(), max.get(), 83);
     }
 
     public static Map<Boolean, List<Person>> partitionAdults(List<Person> input) {

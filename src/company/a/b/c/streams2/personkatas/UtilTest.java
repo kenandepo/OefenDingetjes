@@ -1,9 +1,12 @@
 package company.a.b.c.streams2.personkatas;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -87,22 +90,22 @@ class UtilTest {
             List<String> result = Util.filterPeopleLessThan18YearsOld(input);
             assertEquals(result, List.of("Duke", "Marius"));
         }
-    //
-    //    @Test
-    //    public void shouldRetrieveSummaryStatisticsForAge() {
-    //        List<Person> input = asList(
-    //                new Person("Duke", 10),
-    //                new Person("Fred", 28),
-    //                new Person("John", 45));
-    //
-    //        IntSummaryStatistics summaryStatistics = Util.getSummaryStatisticsForAge(input);
-    //
-    //        assertThat(summaryStatistics.getAverage(), equalTo((double) (10 + 28 + 45) / 3));
-    //        assertThat(summaryStatistics.getSum(), equalTo((long) 10 + 28 + 45));
-    //        assertThat(summaryStatistics.getMin(), equalTo(10));
-    //        assertThat(summaryStatistics.getMax(), equalTo(45));
-    //    }
-    //
+
+        @Test
+        public void shouldRetrieveSummaryStatisticsForAge() {
+            List<Person> input = asList(
+                    new Person("Duke", 10),
+                    new Person("Fred", 28),
+                    new Person("John", 45));
+
+            IntSummaryStatistics summaryStatistics = Util.getSummaryStatisticsForAge(input);
+
+            assertThat(summaryStatistics.getAverage(), equalTo((double) (10 + 28 + 45) / 3));
+            assertThat(summaryStatistics.getSum(), equalTo((long) 10 + 28 + 45));
+            assertThat(summaryStatistics.getMin(), equalTo(10));
+            assertThat(summaryStatistics.getMax(), equalTo(45));
+        }
+
     //    @Test
     //    public void shouldPartitionAdults() {
     //        Person duke = new Person("Duke", 10);
