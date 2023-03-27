@@ -1,7 +1,9 @@
 package company.a.b.c.streams2.personkatas;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
@@ -85,7 +87,28 @@ public class Util {
     }
 
     public static Map<Boolean, List<Person>> partitionAdults(List<Person> input) {
-        return null;
+
+        final Map<Boolean, List<Person>> resultMap = new HashMap<>();
+
+        final List<Person> juniorList = new ArrayList<>();
+
+        final List<Person> seniorList = new ArrayList<>();
+
+        for (int i = 0; i < input.size(); i++) {
+            if (input.get(i)
+                    .getAge() < 18) {
+                juniorList.add(input.get(i));
+            }
+            if (input.get(i)
+                    .getAge() > 17) {
+                seniorList.add(input.get(i));
+            }
+        }
+        resultMap.put(false, juniorList);
+        resultMap.put(true, seniorList);
+
+        return resultMap;
+
     }
 
     public static Map<String, List<Person>> partitionByNationality(List<Person> input) {
