@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 public class Util {
@@ -57,11 +58,18 @@ public class Util {
     }
 
     public static String findNameOfOldestPerson(List<Person> input) {
-        return null;
+        return input.stream()
+                .max(Comparator.comparing(Person::getAge))
+                .map(Person::getName)
+                .get();
     }
 
     public static List<String> filterPeopleLessThan18YearsOld(List<Person> input) {
-        return null;
+        return input.stream()
+                .filter(person -> person.getAge() < 19)
+                .map(p -> p.getName())
+                .toList();
+
     }
 
     public static IntSummaryStatistics getSummaryStatisticsForAge(List<Person> input) {

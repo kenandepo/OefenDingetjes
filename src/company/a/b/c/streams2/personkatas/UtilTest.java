@@ -60,39 +60,33 @@ class UtilTest {
         assertEquals(List.of("Duke", "Fred", "John", "George", "Paal"), result);
     }
 
-    //    @Test
-    //    public void shouldSeparateNamesByComma() {
-    //        List<Person> input = asList(
-    //                new Person("Duke"),
-    //                new Person("Fred"),
-    //                new Person("John"));
-    //
-    //        String result = Util.separateNamesByComma(input);
-    //        assertThat(result, equalTo("Names: Duke, Fred, John."));
-    //    }
-    //
-    //    @Test
-    //    public void shouldFindNameOfOldestPerson() {
-    //        List<Person> input = asList(
-    //                new Person("Duke", 10),
-    //                new Person("Fred", 28),
-    //                new Person("John", 45));
-    //
-    //        String result = Util.findNameOfOldestPerson(input);
-    //        assertThat(result, equalTo("John"));
-    //    }
-    //
-    //    @Test
-    //    public void shouldFilterPeopleLessThan18YearsOld() {
-    //        List<Person> input = asList(
-    //                new Person("Duke", 10),
-    //                new Person("Fred", 28),
-    //                new Person("John", 45),
-    //                new Person("Marius", 17));
-    //
-    //        List<String> result = Util.filterPeopleLessThan18YearsOld(input);
-    //        assertThat(result, contains("Duke", "Marius"));
-    //    }
+    @Test
+    public void shouldSeparateNamesByComma() {
+        List<Person> input = asList(new Person("Duke"), new Person("Fred"), new Person("John"));
+
+        String result = Util.separateNamesByComma(input);
+        assertEquals(List.of("Names: Duke, Fred, John."), result);
+    }
+
+    @Test
+    public void shouldFindNameOfOldestPerson() {
+        List<Person> input = asList(new Person("Duke", 10), new Person("Fred", 28), new Person("John", 45));
+
+        String result = Util.findNameOfOldestPerson(input);
+        assertEquals("John", result);
+    }
+
+        @Test
+        public void shouldFilterPeopleLessThan18YearsOld() {
+            List<Person> input = asList(
+                    new Person("Duke", 10),
+                    new Person("Fred", 28),
+                    new Person("John", 45),
+                    new Person("Marius", 17));
+
+            List<String> result = Util.filterPeopleLessThan18YearsOld(input);
+            assertEquals(result, List.of("Duke", "Marius"));
+        }
     //
     //    @Test
     //    public void shouldRetrieveSummaryStatisticsForAge() {
