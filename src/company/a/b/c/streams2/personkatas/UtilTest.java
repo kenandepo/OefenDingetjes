@@ -113,16 +113,16 @@ class UtilTest {
         assertEquals(List.of(duke), result.get(false));
     }
 
-    //    @Test
-    //    public void shouldPartitionByNationality() {
-    //        Person duke = new Person("Duke", 10, "USA");
-    //        Person fred = new Person("Fred", 28, "Norway");
-    //        Person john = new Person("John", 45, "Norway");
-    //        List<Person> input = asList(duke, fred, john);
-    //
-    //        Map<String, List<Person>> result = Util.partitionByNationality(input);
-    //
-    //        assertThat(result.get("USA"), containsInAnyOrder(duke));
-    //        assertThat(result.get("Norway"), containsInAnyOrder(fred, john));
-    //    }
+    @Test
+    public void shouldPartitionByNationality() {
+        Person duke = new Person("Duke", 10, "USA");
+        Person fred = new Person("Fred", 28, "Norway");
+        Person john = new Person("John", 45, "Norway");
+        List<Person> input = asList(duke, fred, john);
+
+        Map<String, List<Person>> result = Util.partitionByNationality(input);
+
+        assertEquals(List.of(duke), result.get("USA"));
+        assertEquals(List.of(fred, john), result.get("Norway"));
+    }
 }

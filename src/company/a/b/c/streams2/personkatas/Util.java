@@ -112,6 +112,8 @@ public class Util {
     }
 
     public static Map<String, List<Person>> partitionByNationality(List<Person> input) {
-        return null;
+        final Map<String, List<Person>> result = new HashMap<>();
+return null;
+//
     }
 }
